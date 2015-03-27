@@ -1,3 +1,6 @@
+eCurrency (v)1.0 Coin Information
+================================
+
 Coin Type: SHA256 PoW
 Halving at 210,000 Blocks
 Initial Coins per Block = 100 ECC
@@ -9,7 +12,8 @@ Max coinbase = 42000000 + 0 Pre-Mine = 42000000 coins
 P2P Port = 11075
 RPC Port = 21075
 
-Nix Setup:
+Unix Setup:
+================================
 
 apt-get update
 apt-get upgrade
@@ -35,7 +39,8 @@ cp bitcoind ~/eCurrency/ecurrencyd
 
 **(If it fails to compile, be sure that the entire folder is chmod 777 recursively to all folders and directories.)**
 
-To start the daemon:
+To Start the Daemon:
+================================
 
 ./ecurrencyd
 
@@ -43,6 +48,8 @@ eCurrency Commands:
 ./ecurrencyd getinfo
 ./ecurrencyd help
 ./ecurrencyd getaccountaddresses ""
+
+
 
 Bitcoin integration/staging tree
 ================================
