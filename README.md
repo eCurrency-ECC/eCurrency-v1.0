@@ -43,4 +43,3 @@ eCurrency Commands:
 ./ecurrencyd getinfo
 ./ecurrencyd help
 ./ecurrencyd getaccountaddresses ""
-
