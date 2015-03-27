@@ -2,6 +2,7 @@ eCurrency (v)1.0 Coin Information
 ================================
 
 Coin Type: SHA256 PoW
+----------------
 Halving at 210,000 
 Blocks Initial Coins per Block = 100 ECC 
 Target Spacing = 3 Minutes 
@@ -15,8 +16,14 @@ RPC Port = 21075
 Unix Setup:
 ================================
 
+Step 1:
+----------------
+
 apt-get update
 apt-get upgrade
+
+Step 2:
+----------------
 
 apt-get install build-essential
 apt-get install libssl-dev
@@ -26,6 +33,9 @@ apt-get install libboost-all-dev
 apt-get install libdb++-dev libminiupnpc-dev
 apt-get install git-core
 apt-get install ntp
+
+Step 3:
+----------------
 
 cd ~
 mkdir eCurrency
@@ -40,11 +50,13 @@ cp bitcoind ~/eCurrency/ecurrencyd
 **(If it fails to compile, be sure that the entire folder is chmod 777 recursively to all folders and directories.)**
 
 To Start the Daemon:
-================================
+----------------
 
 ./ecurrencyd
 
 eCurrency Commands:
+----------------
+
 ./ecurrencyd getinfo
 ./ecurrencyd help
 ./ecurrencyd getaccountaddresses ""
