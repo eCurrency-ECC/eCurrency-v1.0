@@ -2,14 +2,14 @@ eCurrency (v)1.0 Coin Information
 ================================
 
 Coin Type: SHA256 PoW
-Halving at 210,000 Blocks
-Initial Coins per Block = 100 ECC
-Target Spacing = 3 Minutes
-Target Timespan = 100 Hours
-Coinbase Maturity = 99 Blocks
-Premine = 0 %
-Max coinbase = 42000000 + 0 Pre-Mine = 42000000 coins
-P2P Port = 11075
+Halving at 210,000 
+Blocks Initial Coins per Block = 100 ECC 
+Target Spacing = 3 Minutes 
+Target Timespan = 100 Hours 
+Coinbase Maturity = 99 Blocks 
+Premine = 0 % 
+Max coinbase = 42000000 + 0 Pre-Mine = 42000000 Coins 
+P2P Port = 11075 
 RPC Port = 21075
 
 Unix Setup:
