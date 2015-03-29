@@ -10,7 +10,6 @@
 
 using namespace json_spirit;
 using namespace std;
-
 Value GetNetworkHashPS(int lookup, int height) {
     CBlockIndex *pb = pindexBest;
 
@@ -398,7 +397,7 @@ Value submitblock(const Array& params, bool fHelp)
         throw runtime_error(
             "submitblock <hex data> [optional-params-obj]\n"
             "[optional-params-obj] parameter is currently ignored.\n"
-            "Attempts to submit new block to network.\n"
+            "Attempts to submit new block to network.");
 
     vector<unsigned char> blockData(ParseHex(params[0].get_str()));
     CDataStream ssBlock(blockData, SER_NETWORK, PROTOCOL_VERSION);
