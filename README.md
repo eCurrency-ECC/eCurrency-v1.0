@@ -1,17 +1,17 @@
-eCurrency (v)1.0 Coin Information
+#eCurrency (v)1.0 Coin Information
 ================================
 
-Coin Type: SHA256 PoW
+#Coin Type: SHA256 PoW
 ----------------
-Halving at 210,000 
-Blocks Initial Coins per Block = 100 ECC 
-Target Spacing = 3 Minutes 
-Target Timespan = 100 Hours 
-Coinbase Maturity = 99 Blocks 
-Premine = 0 % 
-Max coinbase = 42000000 + 0 Pre-Mine = 42000000 Coins 
-P2P Port = 11075 
-RPC Port = 21075
+Halving at 210,000  
+Blocks Initial Coins per Block = 100 ECC  
+Target Spacing = 3 Minutes  
+Target Timespan = 100 Hours  
+Coinbase Maturity = 99 Blocks  
+Premine = 0 %  
+Max coinbase = 42000000 + 0 Pre-Mine = 42000000 Coins  
+P2P Port = 11075  
+RPC Port = 21075 
 
 Unix Setup:
 ================================
@@ -19,33 +19,33 @@ Unix Setup:
 Step 1:
 ----------------
 
-apt-get update
+apt-get update  
 apt-get upgrade
 
 Step 2:
 ----------------
 
-apt-get install build-essential
-apt-get install libssl-dev
-apt-get update
-apt-get install libdb4.8++
-apt-get install libboost-all-dev
-apt-get install libdb++-dev libminiupnpc-dev
-apt-get install git-core
-apt-get install ntp
+apt-get install build-essential  
+apt-get install libssl-dev  
+apt-get update  
+apt-get install libdb4.8++  
+apt-get install libboost-all-dev  
+apt-get install libdb++-dev libminiupnpc-dev  
+apt-get install git-core  
+apt-get install ntp  
 
 Step 3:
 ----------------
 
-cd ~
-mkdir eCurrency
-cd /usr/local/
-git clone https://github.com/eCurrency-ECC/eCurrency-v1.0.git
-cd eCurrency-v1.0
-cd /src
-make -f makefile.unix USE_UPNP=
-strip bitcoind
-cp bitcoind ~/eCurrency/ecurrencyd
+cd ~  
+mkdir eCurrency  
+cd /usr/local/  
+git clone https://github.com/eCurrency-ECC/eCurrency-v1.0.git  
+cd eCurrency-v1.0  
+cd /src  
+make -f makefile.unix USE_UPNP=  
+strip bitcoind  
+cp bitcoind ~/eCurrency/ecurrencyd  
 
 **(If it fails to compile, be sure that the entire folder is chmod 777 recursively to all folders and directories.)**
 
@@ -57,9 +57,9 @@ To Start the Daemon:
 eCurrency Commands:
 ----------------
 
-./ecurrencyd getinfo
-./ecurrencyd help
-./ecurrencyd getaccountaddresses ""
+./ecurrencyd getinfo  
+./ecurrencyd help  
+./ecurrencyd getaccountaddresses ""  
 
 
 
