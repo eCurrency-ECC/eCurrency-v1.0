@@ -24,6 +24,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 Este es un software experimental.
 
 Distribuido bajo la licencia MIT/X11, vea el archivo adjunto
+Distribuido bajo la licencia MIT/X11, vea el archivo adjunto
 COPYING o http://www.opensource.org/licenses/mit-license.php.
 
 Este producto incluye software desarrollado por OpenSSL Project para su uso en
@@ -1322,8 +1323,8 @@ Dirección: %4</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 ECC</source>
-        <translation>123.456 ECC</translation>
+        <source>123.456 eCur</source>
+        <translation>123.456 eCur</translation>
     </message>
     <message>
         <location line="+31"/>

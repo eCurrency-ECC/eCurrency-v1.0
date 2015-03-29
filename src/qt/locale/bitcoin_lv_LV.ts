@@ -1314,8 +1314,8 @@ Adrese: %4
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 ECC</source>
-        <translation>123,456 ECC</translation>
+        <source>123.456 eCur</source>
+        <translation>123,456 eCur</translation>
     </message>
     <message>
         <location line="+31"/>
