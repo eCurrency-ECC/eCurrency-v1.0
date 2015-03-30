@@ -44,8 +44,8 @@ git clone https://github.com/eCurrency-ECC/eCurrency-v1.0.git
 cd eCurrency-v1.0  
 cd /src  
 make -f makefile.unix USE_UPNP=  
-strip bitcoind  
-cp bitcoind ~/eCurrency/ecurrencyd  
+strip ecurrencyd  
+cp ecurrencyd ~/eCurrency/ecurrencyd  
 
 **(If it fails to compile, be sure that the entire folder is chmod 777 recursively to all folders and directories.)**
 
