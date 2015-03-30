@@ -1030,10 +1030,6 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    return fs::path(".");
-}
-{
-    namespace fs = boost::filesystem;
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\eCurrency
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\eCurrency
     // Mac: ~/Library/Application Support/eCurrency
