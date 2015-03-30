@@ -1032,7 +1032,33 @@ boost::filesystem::path GetDefaultDataDir()
     namespace fs = boost::filesystem;
     return fs::path(".");
 }
-
+{
+    namespace fs = boost::filesystem;
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\eCurrency
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\eCurrency
+    // Mac: ~/Library/Application Support/eCurrency
+    // Unix: ~/.eCurrency
+#ifdef WIN32
+    // Windows
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "eCurrency";
+#else
+    fs::path pathRet;
+    char* pszHome = getenv("HOME");
+    if (pszHome == NULL || strlen(pszHome) == 0)
+        pathRet = fs::path("/");
+    else
+        pathRet = fs::path(pszHome);
+#ifdef MAC_OSX
+    // Mac
+    pathRet /= "Library/Application Support";
+    fs::create_directory(pathRet);
+    return pathRet / "eCurrency";
+#else
+    // Unix
+    return pathRet / ".eCurrency";
+#endif
+#endif
+}
 const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 {
     namespace fs = boost::filesystem;
