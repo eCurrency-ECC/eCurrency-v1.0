@@ -1030,46 +1030,37 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    return fs::path(".");
-}
-
-const boost::filesystem::path &GetDataDir(bool fNetSpecific)
-{
-    namespace fs = boost::filesystem;
-
-    static fs::path pathCached[2];
-    static CCriticalSection csPathCached;
-
-    fs::path &path = pathCached[fNetSpecific];
-
-    // This can be called during exceptions by printf, so we cache the
-    // value so we don't have to do memory allocations after that.
-    if (fCachedPath[fNetSpecific])
-        return path;
-    LOCK(csPathCached);
-
-    if (mapArgs.count("-datadir")) {
-        path = fs::system_complete(mapArgs["-datadir"]);
-        if (!fs::is_directory(path)) {
-            path = "";
-            return path;
-        }
-    } else {
-        path = GetDefaultDataDir();
-    }
-    if (fNetSpecific && GetBoolArg("-testnet", false))
-        path /= "testnet3";
-
-    fs::create_directories(path);
-
-    fCachedPath[fNetSpecific] = true;
-    return path;
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\eCurrency
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\eCurrency
+    // Mac: ~/Library/Application Support/eCurrency
+    // Unix: ~/.eCurrency
+#ifdef WIN32
+    // Windows
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "eCurrency";
+#else
+    fs::path pathRet;
+    char* pszHome = getenv("HOME");
+    if (pszHome == NULL || strlen(pszHome) == 0)
+        pathRet = fs::path("/");
+    else
+        pathRet = fs::path(pszHome);
+#ifdef MAC_OSX
+    // Mac
+    pathRet /= "Library/Application Support";
+    fs::create_directory(pathRet);
+    return pathRet / "eCurrency";	
+#else
+    // Unix
+    return pathRet / ".eCurrency";
+#endif
+#endif
 }
 
 boost::filesystem::path GetConfigFile()
 {
     boost::filesystem::path pathConfigFile(GetArg("-conf", "ecurrency.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
+    return pathConfigFile;
     return pathConfigFile;
 }
 
@@ -1078,7 +1069,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good())
-        return; // No bitcoin.conf file is OK
+        return; // No ecurrency.conf file is OK
 
     // clear path cache after loading config file
     fCachedPath[0] = fCachedPath[1] = false;
