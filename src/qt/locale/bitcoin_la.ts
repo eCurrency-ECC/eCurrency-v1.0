@@ -756,7 +756,7 @@ Inscriptio: %4
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
         <source>Bitcoin-Qt</source>
-        <translation>eCurrency-Qt</translation>
+        <translation>eCurrency</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1219,7 +1219,7 @@ Inscriptio: %4
     <message>
         <location line="+7"/>
         <source>Show the Bitcoin-Qt help message to get a list with possible Bitcoin command-line options.</source>
-        <translation>Monstra nuntium auxilii eCurrency-Qt ut videas enumerationem possibilium optionum eCurrency mandati initiantis.</translation>
+        <translation>Monstra nuntium auxilii eCurrency ut videas enumerationem possibilium optionum eCurrency mandati initiantis.</translation>
     </message>
     <message>
         <location line="+3"/>

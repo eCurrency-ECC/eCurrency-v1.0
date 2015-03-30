@@ -35,7 +35,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <source>The Bitcoin developers</source>
-        <translation>eCurrency-qt 客户端开发团队</translation>
+        <translation>eCurrency 客户端开发团队</translation>
     </message>
 </context>
 <context>
@@ -757,7 +757,7 @@ Address: %4
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
         <source>Bitcoin-Qt</source>
-        <translation>eCurrency-Qt</translation>
+        <translation>eCurrency</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1651,7 +1651,7 @@ Address: %4
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
         <source>The Bitcoin developers</source>
-        <translation>eCurrency-qt 客户端开发团队</translation>
+        <translation>eCurrency 客户端开发团队</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -153,9 +153,9 @@ int main(int argc, char *argv[])
     QApplication::setOrganizationName("eCurrency");
     QApplication::setOrganizationDomain("ecurrency.io");
     if(GetBoolArg("-testnet")) // Separate UI settings for testnet
-        QApplication::setApplicationName("eCurrency-Qt-testnet");
+        QApplication::setApplicationName("eCurrency-testnet");
     else
-        QApplication::setApplicationName("eCurrency-Qt");
+        QApplication::setApplicationName("eCurrency");
 
     // ... then GUI settings:
     OptionsModel optionsModel;

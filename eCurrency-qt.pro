@@ -1,7 +1,7 @@
 TEMPLATE = app
-TARGET = ecurrency-qt
-macx:TARGET = "eCurrency-Qt"
-VERSION = 0.8.6
+TARGET = eCurrency
+macx:TARGET = "eCurrency"
+VERSION = 1.0.0.0
 INCLUDEPATH += src src/json src/qt
 QT += network
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE

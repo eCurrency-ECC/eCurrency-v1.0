@@ -101,7 +101,7 @@ Section -post SEC0001
     WriteRegStr HKCR "ecurrency" "URL Protocol" ""
     WriteRegStr HKCR "ecurrency" "" "URL:ecurrency"
     WriteRegStr HKCR "ecurrency\DefaultIcon" "" $INSTDIR\bitcoin-qt.exe
-    WriteRegStr HKCR "ecurrency\shell\open\command" "" '"$INSTDIR\ecurrency-qt.exe" "%1"'
+    WriteRegStr HKCR "ecurrency\shell\open\command" "" '"$INSTDIR\eCurrency.exe" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections

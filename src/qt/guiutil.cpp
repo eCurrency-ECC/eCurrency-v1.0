@@ -421,10 +421,10 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("eCurrency-Qt") + " " + tr("version") + " " +
+    header = tr("eCurrency") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  ecurrency-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  ecurrency [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 

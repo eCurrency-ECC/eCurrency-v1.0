@@ -757,7 +757,7 @@ Adresse: %4
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
         <source>Bitcoin-Qt</source>
-        <translation>eCurrency-Qt</translation>
+        <translation>eCurrency</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1221,7 +1221,7 @@ Adresse: %4
     <message>
         <location line="+7"/>
         <source>Show the Bitcoin-Qt help message to get a list with possible Bitcoin command-line options.</source>
-        <translation>Vis eCurrency-Qt hjelpemelding for å få en liste med mulige kommandolinjevalg.</translation>
+        <translation>Vis eCurrency hjelpemelding for å få en liste med mulige kommandolinjevalg.</translation>
     </message>
     <message>
         <location line="+3"/>
